@@ -6,7 +6,7 @@ Currently there are two ways to run this program:
 ### First Option
 The easiest way is to use the zip file. Please note this will only work if you have an Altera DE2 Board as the pin assignments are declared exclusively for that. If this is your situation, just open the project, synthesize the board and run!
 ### Second Option
-1) Make a project in the FPGA synthesis software of your choice containing all the *.VHD* and *.MIF* files. Assign pins according to your board.
+1) Make a project in the FPGA synthesis software of your choice containing all the *.VHD* and *.MIF* files. Note that `lab7_final.vhd` will be the top-level file.
 2) Assign pins according to your board. Note that LCD-related pins are given according to those for the Hitachi HD44780-family LCD screen controllers.
 3) Synthesize and run!
 
@@ -33,5 +33,5 @@ The easiest way is to use the zip file. Please note this will only work if you h
 | HALT        | 11110000         | PC ← 0, stop microsequencer                 |
 
 **Note:**  
-- `X` = 8-bit data or address.  
+- `x` = 8-bit data or address, depending on context.  
 - `m`, `n` = 0 or 1, but always m ≠ n. This bit of the instruction code determines which register to use.
