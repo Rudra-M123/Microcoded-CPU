@@ -34,4 +34,4 @@ The easiest way is to use the zip file. Please note this will only work if you h
 
 **Note:**  
 - `x` = 8-bit data or address, depending on context.  
-- `m`, `n` = 0 or 1, but always m ≠ n. This bit of the instruction code determines which register to use.
+- `m`, `n` = 0 or 1, but always m ≠ n. This bit determines which register to use.
