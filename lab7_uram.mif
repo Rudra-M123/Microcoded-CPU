@@ -1,0 +1,23 @@
+DEPTH = 256;
+WIDTH = 8;
+
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+
+CONTENT BEGIN
+  [0..FF]: 00;
+
+  -- 00: loadsp F0 SP = F0
+  -- 02: loadi R0,13 R0 = 13, R1 = ??, SP = F0
+  -- 04: call 80 R0 = 13, R1 = ??, SP = EF
+  -- 06: loadi R1,EE R0 = 15, R1 = EE, SP = F0
+  -- 08: halt
+  -- 80: peep R1 R0 = 13, R1 = 06, SP = EF
+  -- 81: loadi R1,2 R0 = 13, R1 = 02, SP = EF
+  -- 83: add R0,R1 R0 = 15, R1 = 02, SP = EF
+  -- 84: return R0 = 15, R1 = 02, SP = F0
+  -- 85: halt
+
+  00: B0 F0 10 13 D0 80 11 EE F0;
+  80: C1 11 02 50 E0 F0;
+END;
